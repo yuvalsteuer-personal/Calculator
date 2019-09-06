@@ -62,7 +62,7 @@ class Lexer(object):
     def tokenize(self):
         lexeme = ""
         is_number_lexeme = False
-        while(self.__index < len(self.__string)):
+        while self.__index < len(self.__string):
             char = self.__string[self.__index]
             if is_number_lexeme:
                 if is_number(char):

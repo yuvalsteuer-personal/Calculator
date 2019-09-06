@@ -14,8 +14,8 @@ class Evaluator(object):
         result = None
         stack = TokenStream()
         for token in self.__parsed_token_stream:
-            if(is_operator(token_class=token.token_class)):
-                if(token.lexeme == '~' or token.lexeme == '!'):
+            if is_operator(token_class=token.token_class):
+                if token.lexeme == '~' or token.lexeme == '!':
                     operand_1 = stack.read_token()
                     result = Token(self.__eval_unary_expression(token, operand_1.lexeme),NUMBER_TOKEN)
                 else:
@@ -30,7 +30,7 @@ class Evaluator(object):
                         token_class=NUMBER_TOKEN
                     )
                 stack.push_token(result)
-            elif(token.token_class == NUMBER_TOKEN):
+            elif token.token_class == NUMBER_TOKEN:
                 stack.push_token(token)
 
         result_token = stack.read_token()

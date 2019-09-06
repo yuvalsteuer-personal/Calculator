@@ -3,7 +3,7 @@ from calculator.calculator import calculate
 
 def main():
     expression = ""
-    while(expression != "exit()"):
+    while expression != "exit()":
         expression = input(">> ")
         if expression == 'exit()':
             exit(0)
