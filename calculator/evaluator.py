@@ -33,7 +33,9 @@ class Evaluator(object):
             elif(token.token_class == NUMBER_TOKEN):
                 stack.push_token(token)
 
-        return stack.read_token().lexeme
+        result_token = stack.read_token()
+        result = result_token.lexeme
+        return result
 
     def __eval_binary_expression(self, op, left, right):
         if op.token_class == PLUS_TOKEN:

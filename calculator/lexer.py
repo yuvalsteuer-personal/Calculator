@@ -67,6 +67,8 @@ class Lexer(object):
             if is_number_lexeme:
                 if is_number(char):
                     lexeme += char
+                    if self.__index == len(self.__string) - 1:
+                        self.__token_stream.append(self.tokenize_lexeme(lexeme))
                 else:
                     self.__token_stream.append(self.tokenize_lexeme(lexeme))
                     lexeme = char
