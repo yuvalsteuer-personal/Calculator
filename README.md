@@ -17,10 +17,10 @@
 - Factorial
 - SUPPORT for **Parenthesis!**
 
-"Calculator"s operator table:
+## Operation's table
 
 |Command                |Operator                                                  |
-|----------------|-------------------------------|-----------------------------|
+|----------------|-------------------------------|
 |Addition|`+`            |
 |Subtraction          |`-`            |        
 |Multiplication          |`*`|
